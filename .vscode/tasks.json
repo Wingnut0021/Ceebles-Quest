@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build ROM",
+            "type": "shell",
+            "windows": {
+                "command": "mkdir build & G:\\gbdk\\bin\\lcc -debug -o build\\game.gb src\\main.c"
+            },
+            "problemMatcher": ["$msCompile", "$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
