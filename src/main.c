@@ -2,16 +2,15 @@
 #include <stdio.h>
 #include "tiles/NumberTiles.h"
 #include "input/Buttons.c"
+#include "scene/intro.c"
+#include "scene/mainmenu.c"
 
 
-void intro(void) 
-{
-    printf("Welcome to the game!\n");
-    waitpad(J_START);
-}
+
 void main(void)
 {
     intro();
+    mainmenu();
     // Load tileset into GB memory
     set_bkg_data(0, 1, NumberTiles);
 
@@ -24,7 +23,7 @@ void main(void)
 
     while (1)
     {
-        input();
+        inputDirection();
         wait_vbl_done();
     }
 
