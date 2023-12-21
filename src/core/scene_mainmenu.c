@@ -4,8 +4,7 @@
 
 
 
-void initializeMainMenuScene(void) 
-{
+void initializeMainMenuScene(void) {
     DISPLAY_ON;
     wait_vbl_done();
     delay(100);
@@ -18,7 +17,6 @@ void initializeMainMenuScene(void)
     HIDE_BKG;
 }
 
-void updateMainMenuScene(void) 
-{
+void updateMainMenuScene(void) {
 
 }

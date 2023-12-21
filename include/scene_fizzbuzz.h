@@ -5,4 +5,4 @@
 
 void fizzbuzz(void);
 
-#endif //FIZZBUZZ_H
+#endif

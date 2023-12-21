@@ -5,4 +5,4 @@
 
 void core_run(void);
 
-#endif // CORE_H
+#endif

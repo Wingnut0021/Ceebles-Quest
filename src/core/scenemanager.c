@@ -5,14 +5,12 @@
 
 static enum Scene currentScene;
 
-void initializeScene(enum Scene initialScene) 
-{
+void initializeScene(enum Scene initialScene) {
     currentScene = initialScene;
     switchScene(initialScene);
 }
 
-void updateScene(void) 
-{
+void updateScene(void) {
     switch (currentScene) {
         case SPLASH:
             updateSplashScene();
@@ -23,12 +21,10 @@ void updateScene(void)
     }
 }
 
-void switchScene(enum Scene newScene) 
-{
+void switchScene(enum Scene newScene) {
     currentScene = newScene;
 
-    switch (newScene)
-    {
+    switch (newScene) {
         case SPLASH:
             initializeSplashScene();
             break;

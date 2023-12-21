@@ -13,13 +13,11 @@ void initializeSplashScene(void) {
     set_bkg_data(0, ts_house_size, ts_house);
     set_bkg_tiles(0, 0, tm_house_width, tm_house_height, tm_house);
 }
+
 void updateSplashScene(void) {
-    // Update the splash scene
     if (splashTimer > 0) {
-        // Decrement the timer
         splashTimer--;
     } else {
-        // Switch to the main menu scene after 2 seconds
         switchScene(MAIN_MENU);
     }
 }

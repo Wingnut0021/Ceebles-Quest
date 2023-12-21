@@ -5,7 +5,7 @@
             "label": "Build ROM",
             "type": "shell",
             "windows": {
-                "command": "mkdir build & G:\\gbdk\\bin\\lcc -Iinclude -debug -o build\\game.gb src\\*.c src\\core\\*.c src\\data\\*.c src\\states\\*.c"
+                "command": "mkdir build & G:\\gbdk\\bin\\lcc -Iinclude -debug -o build\\game.gb src\\*.c src\\core\\*.c src\\data\\*.c"
             },
             "problemMatcher": ["$msCompile", "$gcc"],
             "group": {
