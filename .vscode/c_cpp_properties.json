@@ -4,6 +4,9 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/include/data/**",
+                "${workspaceFolder}/include/states/**",
                 "${workspaceFolder}/../../Resources/gbdk-mac/include/**"
             ]
         },
@@ -11,6 +14,9 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
+                "${workspaceFolder}/include/**",
+                "${workspaceFolder}/include/data/**",
+                "${workspaceFolder}/include/states/**",
                 "${workspaceFolder}/../../Resources/gbdk-win/include/**"
             ]
         }
