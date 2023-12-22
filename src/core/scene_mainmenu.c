@@ -1,16 +1,14 @@
 #include <gb/gb.h>
 #include <stdio.h>
-#include "ts_splash.h"
+#include "ts_mainmenu.h"
 
 
 
 void initializeMainMenuScene(void) {
     DISPLAY_ON;
-    wait_vbl_done();
-    delay(100);
     SHOW_BKG;
-    set_bkg_data(0, ts_splash_size, ts_splash);
-    set_bkg_tiles(0, 0, tm_splash_width, tm_splash_height, tm_splash);
+    set_bkg_data(0, ts_mainmenu_size, ts_mainmenu);
+    set_bkg_tiles(0, 0, tm_mainmenu_width, tm_mainmenu_height, tm_mainmenu);
     
     // Wait for the start button to be pressed.
     waitpad(J_START);  
@@ -18,5 +16,4 @@ void initializeMainMenuScene(void) {
 }
 
 void updateMainMenuScene(void) {
-
 }

@@ -5,6 +5,8 @@
 enum Scene {
     SPLASH,
     MAIN_MENU,
+    SCENE_INTRO,
 };
+
 
 #endif

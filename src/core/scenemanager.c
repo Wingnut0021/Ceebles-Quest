@@ -27,9 +27,11 @@ void switchScene(enum Scene newScene) {
     switch (newScene) {
         case SPLASH:
             initializeSplashScene();
+            SHOW_BKG;
             break;
         case MAIN_MENU:
             initializeMainMenuScene();
+            SHOW_BKG;
             break;
     }
 }
