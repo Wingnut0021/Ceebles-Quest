@@ -7,7 +7,7 @@
                 "${workspaceFolder}/include/**",
                 "${workspaceFolder}/include/data/**",
                 "${workspaceFolder}/include/states/**",
-                "${workspaceFolder}/../../Resources/gbdk-mac/include/**"
+                "${workspaceFolder}/../gbdk/Resources/gbdk-mac/include/**"
             ]
         },
         {
@@ -17,7 +17,7 @@
                 "${workspaceFolder}/include/**",
                 "${workspaceFolder}/include/data/**",
                 "${workspaceFolder}/include/states/**",
-                "${workspaceFolder}/../../Resources/gbdk-win/include/**"
+                "${workspaceFolder}/../gbdk/Resources/gbdk-win/include/**"
             ]
         }
     ],
