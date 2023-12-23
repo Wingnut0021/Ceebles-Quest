@@ -54,4 +54,5 @@ dkms.conf
 build/
 res/
 .vscode/
+gbdk/
 .DS_Store
