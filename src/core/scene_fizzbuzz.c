@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdint.h>
 
+// Prints fizzbuzz to screen from 1 to 100
 int fizzbuzz(void) {
     int i;
     for(i=1; i<=100; ++i) {

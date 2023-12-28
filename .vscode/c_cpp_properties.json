@@ -17,7 +17,7 @@
                 "${workspaceFolder}/include/**",
                 "${workspaceFolder}/include/data/**",
                 "${workspaceFolder}/include/states/**",
-                "${workspaceFolder}/../gbdk/Resources/gbdk-win/include/**"
+                "${workspaceFolder}/../../Resources/gbdk-win/include/**"
             ]
         }
     ],
