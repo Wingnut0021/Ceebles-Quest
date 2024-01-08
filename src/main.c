@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "core.h"
 
-void main(void) {
+int main(void) {
     core_run();
+    return 0;
 }

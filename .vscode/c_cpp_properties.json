@@ -7,7 +7,7 @@
                 "${workspaceFolder}/include/**",
                 "${workspaceFolder}/include/data/**",
                 "${workspaceFolder}/include/states/**",
-                "${workspaceFolder}/../gbdk/Resources/gbdk-mac/include/**"
+                "${workspaceFolder}/../../Resources/gbdk-mac/include/**"
             ]
         },
         {

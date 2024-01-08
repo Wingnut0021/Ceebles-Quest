@@ -4,6 +4,7 @@
 #include <gb/gb.h>
 
 void initializeMainMenuScene(void);
+void pressStart(void);
 void updateMainMenuScene(void);
 
 #endif

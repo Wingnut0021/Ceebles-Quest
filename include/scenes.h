@@ -1,4 +1,3 @@
-// scenes.h
 #ifndef SCENES_H
 #define SCENES_H
 
@@ -8,6 +7,5 @@ enum Scene {
     SCENE_INTRO,
     SAMPLE_LEVEL,
 };
-
 
 #endif

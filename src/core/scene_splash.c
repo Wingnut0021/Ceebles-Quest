@@ -1,8 +1,8 @@
 #include <gb/gb.h>
 #include <stdio.h>
+#include <string.h>
 #include "ts_splash.h"
 #include "scenemanager.h"
-#include <string.h>
 
 static UINT16 splashTimer;
 

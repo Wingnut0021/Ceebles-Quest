@@ -6,13 +6,7 @@
 
 static enum Scene currentScene;
 
-void initializeScene(enum Scene initialScene) {
-    currentScene = initialScene;
-    switchScene(initialScene);
-}
-
-
-void clearTilemap() {
+void clearTilemap(void) {
     // Set all tiles to value 0
     UINT8 emptyTile = 0;
     for (UINT8 y = 0; y < 18; y++) {
@@ -55,4 +49,9 @@ void switchScene(enum Scene newScene) {
             SHOW_BKG;
             break;
     }
+}
+
+void initializeScene(enum Scene initialScene) {
+    currentScene = initialScene;
+    switchScene(initialScene);
 }

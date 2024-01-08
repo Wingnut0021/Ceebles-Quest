@@ -3,7 +3,7 @@
 
 #include "scenes.h"
 
-void clearTilemap();
+void clearTilemap(void);
 void initializeScene(enum Scene initialScene);
 void updateScene(void);
 void switchScene(enum Scene newScene);
