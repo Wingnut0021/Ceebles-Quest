@@ -5,7 +5,10 @@
             "label": "Build ROM",
             "type": "shell",
             "windows": {
-                "command": "mkdir build & G:\\gbdk\\bin\\lcc -Iinclude -debug -o build\\game.gb src\\*.c src\\core\\*.c src\\data\\*.c"
+                "command": "mkdir build & ..\\..\\gbdk\\Resources\\gbdk-win\\bin\\lcc -Iinclude -debug -o build\\game.gb src\\*.c src\\core\\*.c src\\data\\*.c"
+            },
+            "osx": {
+                "command": "mkdir build; ../../Resources/gbdk-mac/bin/lcc -Iinclude -debug -o build/game.gb src/*.c src/core/*.c src/data/*.c"
             },
             "problemMatcher": ["$msCompile", "$gcc"],
             "group": {

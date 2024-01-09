@@ -7,12 +7,16 @@
         {
             "type": "emulicious-debugger",
             "request": "launch",
-            "emuliciousPath": "${workspaceFolder}\\gbdk\\resources\\Emulicious",
+            "osx": {
+            "emuliciousPath": "${workspaceFolder}/gbdk/Resources/Emulicious"
+            },
+            "windows": {
+            "emuliciousPath": "${workspaceFolder}\\gbdk\\Resources\\Emulicious"
+            },
             "name": "Launch in Emulicious",
             "program": "${workspaceFolder}/build/game.gb",
             "port": 58870,
-            "stopOnEntry": false,
-            "preLaunchTask": "${defaultBuildTask}"
+            "stopOnEntry": false
         }
     ]
 }
