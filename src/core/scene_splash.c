@@ -13,17 +13,21 @@ void initializeSplashScene(void) {
     set_bkg_data(0, ts_splash_size, ts_splash);
     set_bkg_tiles(0, 0, tm_splash_width, tm_splash_height, tm_splash);
     DISPLAY_ON;
-    delay(100);
     SHOW_BKG;
+    fadeIn(10);
 }
 
+void endSplashScene(void) {
+    fadeOut(10);
+}
 // Switch scene when timer ends
 void updateSplashScene(void) {
     if (splashTimer > 0) {
         splashTimer--;
     } else {
+        endSplashScene();
         HIDE_BKG;
-        delay(100);
+        delay(10);
         DISPLAY_OFF;
         switchScene(MAIN_MENU);
     }

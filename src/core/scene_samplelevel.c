@@ -1,11 +1,13 @@
 #include <gb/gb.h>
 #include <stdio.h>
-#include "bg_ground.h"
+#include "ts_sampleMap.h"
+#include "scenemanager.h"
 
 void initializeSampleLevelScene(void) {
     // Set background tileset and tilemap
-    set_bkg_data(0, bg_ground_size, bg_ground);
-    set_bkg_tiles(0, 0, bg_ground_sampleTilemap_width, bg_ground_sampleTilemap_height, bg_ground_sampleTilemap);
+    set_bkg_data(0, ts_sampleMap_size, ts_sampleMap);
+    set_bkg_tiles(0, 0, tm_sampleMap_width, tm_sampleMap_height, tm_sampleMap);
+    fadeIn(100);
     SHOW_BKG;
     delay(100);
     DISPLAY_ON;
@@ -13,5 +15,5 @@ void initializeSampleLevelScene(void) {
 
 void updateSampleLevelScene(void) 
 {
-    wait_vbl_done();
+    
 }

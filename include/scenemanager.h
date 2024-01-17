@@ -3,6 +3,8 @@
 
 #include "scenes.h"
 
+void fadeIn(int fadeSpeed);
+void fadeOut(int fadeSpeed);
 void clearTilemap(void);
 void initializeScene(enum Scene initialScene);
 void updateScene(void);

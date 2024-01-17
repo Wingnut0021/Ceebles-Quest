@@ -4,6 +4,7 @@
 #include <gb/gb.h>
 
 void initializeSplashScene(void);
+void endSplashScene(void);
 void updateSplashScene(void);
 
 #endif

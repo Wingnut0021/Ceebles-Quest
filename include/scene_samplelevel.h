@@ -1,5 +1,5 @@
-#ifndef SCENE_SPLASH_H
-#define SCENE_SPLASH_H
+#ifndef SCENE_SAMPLELEVEL_H
+#define SCENE_SAMPLELEVEL_H
 
 #include <gb/gb.h>
 
