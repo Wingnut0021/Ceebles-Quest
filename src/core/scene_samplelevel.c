@@ -1,7 +1,9 @@
 #include <gb/gb.h>
 #include <stdio.h>
+
 #include "ts_sampleMap.h"
 #include "scenemanager.h"
+#include "player.h"
 
 void initializeSampleLevelScene(void) {
     // Set background tileset and tilemap
@@ -10,10 +12,10 @@ void initializeSampleLevelScene(void) {
     fadeIn(100);
     SHOW_BKG;
     delay(100);
+    initializePlayer();
     DISPLAY_ON;
 }
 
-void updateSampleLevelScene(void) 
-{
+void updateSampleLevelScene(void) {
     
 }
