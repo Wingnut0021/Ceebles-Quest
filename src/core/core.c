@@ -17,7 +17,6 @@ void core_run(void) {
     initializeScene(SPLASH);
     while (1) {
         updateScene();
-        updatePlayer();
         wait_vbl_done();
     }
 }

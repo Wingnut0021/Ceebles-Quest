@@ -17,5 +17,5 @@ void initializeSampleLevelScene(void) {
 }
 
 void updateSampleLevelScene(void) {
-    
+    updatePlayer();
 }
