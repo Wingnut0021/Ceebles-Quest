@@ -17,6 +17,7 @@ void normalizeSpeed(void) {
 }
 
 void updatePlayer(void) {
-    getInput();
-    scroll_sprite(0,1,1);
+    int x = getXDirectionInput(x);
+    int y = getYDirectionInput(y);
+    scroll_sprite(0, x, y);
 }
