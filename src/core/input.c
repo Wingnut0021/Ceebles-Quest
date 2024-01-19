@@ -2,7 +2,6 @@
 #include "input.h"
 
 
-
 int getXDirectionInput(int x) {
     UBYTE input = joypad();
     if (input & J_LEFT) {

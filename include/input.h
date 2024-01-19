@@ -6,6 +6,6 @@
 
 
 int getXDirectionInput(int x);
-int getYDirectionInput(int x);
+int getYDirectionInput(int y);
 
 #endif
