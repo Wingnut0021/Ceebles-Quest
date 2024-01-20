@@ -2,8 +2,8 @@
 #define PLAYER_H
 
 
-void normalizeSpeed(void);
 void initializePlayer(void);
+void movePlayer(void);
 void updatePlayer(void);
 
 #endif
