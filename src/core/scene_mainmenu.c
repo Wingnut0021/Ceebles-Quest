@@ -17,7 +17,6 @@ void initializeMainMenuScene(void) {
     set_bkg_tiles(0, 0, tm_mainmenu_width, tm_mainmenu_height, tm_mainmenu);
     SHOW_BKG;
     fadeIn(10);
-    delay(100);
     DISPLAY_ON;
     waitpad(J_START);
     pressStart();
