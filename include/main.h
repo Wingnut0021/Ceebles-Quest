@@ -2,6 +2,6 @@
 #define MAIN_H
 
 
-void main();
+void main(void);
 
 #endif
