@@ -1,5 +1,4 @@
 #include <gb/gb.h>
-#include "input.h"
 
 
 int getXDirectionInput(int x) {
@@ -24,4 +23,52 @@ int getYDirectionInput(int y) {
         return y;
     }
     return y;
+}
+
+int getAInput(int a) {
+    UBYTE input = joypad();
+    if (input & J_A) {
+        a = -1;
+        return a;
+    } else if (input & J_A) {
+        a = 1;
+        return a;
+    }
+    return a;
+}
+
+int getBInput(int b) {
+    UBYTE input = joypad();
+    if (input & J_B) {
+        b = -1;
+        return b;
+    } else if (input & J_B) {
+        b = 1;
+        return b;
+    }
+    return b;
+}
+
+int getSELECTInput(int select) {
+    UBYTE input = joypad();
+    if (input & J_SELECT) {
+        select = -1;
+        return select;
+    } else if (input & J_SELECT) {
+        select = 1;
+        return select;
+    }
+    return select;
+}
+
+int getSTARTInput(int start) {
+    UBYTE input = joypad();
+    if (input & J_START) {
+        start = -1;
+        return start;
+    } else if (input & J_START) {
+        start = 1;
+        return start;
+    }
+    return start;
 }
