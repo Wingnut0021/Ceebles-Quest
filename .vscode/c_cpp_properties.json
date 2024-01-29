@@ -2,6 +2,8 @@
     "configurations": [
         {
             "name": "Mac",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include/**",
@@ -12,6 +14,8 @@
         },
         {
             "name": "Win32",
+            "cStandard": "c11",
+            "intelliSenseMode": "gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include/**",
