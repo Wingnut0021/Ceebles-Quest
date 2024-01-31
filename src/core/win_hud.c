@@ -5,10 +5,14 @@
 #include "input.h"
 #include "bg_hud_tileset.h"
 #include "bg_hud_tilemap.h"
+#include "sound_effects.h"
+
 
 #define hudDownPosition 128
 #define hudUpPosition 0
 
+
+uint8_t hudMoving = 0;
 uint8_t hudCurrentPosition;
 
 
@@ -22,20 +26,30 @@ void initializeHud(void) {
 
 void updateHud(void) {
     uint8_t inputStart = getSTARTInput(inputStart);
-    if (inputStart == 255 && !hudCurrentPosition == 0) {
-        scroll_win(0, -2);
-        hudCurrentPosition -= 2;
+    if (inputStart == 1 && hudCurrentPosition == 128 && hudMoving == 0) {
+        hudMoving = 1;
+        openMenuSound();
         HIDE_SPRITES;
+        while (hudCurrentPosition != 0) {
+            delay(10);
+            scroll_win(0,-2);
+            hudCurrentPosition -= 2;
+        }
+        if (hudCurrentPosition == 0) {
+            hudMoving = 0;
+        }
     }
-    else if (inputStart == 255 && hudCurrentPosition == 0) {
-        scroll_win(0, 0);
-        hudCurrentPosition -= 0;
-    }
-    else if (hudCurrentPosition == 128) {
-        SHOW_SPRITES;
-    }
-    else {
-        scroll_win(0, 2);
-        hudCurrentPosition += 2;
+    else if (inputStart == 1 && hudCurrentPosition == 0 && hudMoving == 0) {
+        hudMoving = 1;
+        closeMenuSound();
+        while (hudCurrentPosition != 128) {
+            delay(10);
+            scroll_win(0, 2);
+            hudCurrentPosition += 2;
+        }
+        if (hudCurrentPosition == 128) {
+            hudMoving = 0;
+            SHOW_SPRITES;
+        }
     }
 }
