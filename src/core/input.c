@@ -1,5 +1,7 @@
 #include <gb/gb.h>
+#include <gbdk/emu_debug.h>
 
+UBYTE previousInputState = 0;
 
 int getXDirectionInput(int x) {
     UBYTE input = joypad();
@@ -9,8 +11,10 @@ int getXDirectionInput(int x) {
     } else if (input & J_RIGHT) {
         x = 1;
         return x;
+    } else {
+        x = 0;
+        return x;
     }
-    return x;
 }
 
 int getYDirectionInput(int y) {
@@ -21,54 +25,52 @@ int getYDirectionInput(int y) {
     } else if (input & J_DOWN) {
         y = 1;
         return y;
+    } else {
+        y = 0;
+        return y;
     }
-    return y;
 }
 
-int getAInput(int a) {
+int getAInput(void) {
     UBYTE input = joypad();
-    if (input & J_A) {
-        a = -1;
-        return a;
-    } else if (input & J_A) {
-        a = 1;
-        return a;
+    if (input & J_A && !(previousInputState & J_A)) {
+        previousInputState = input;
+        return 1;
+    } else {
+        previousInputState = input;
+        return 0;
     }
-    return a;
 }
 
-int getBInput(int b) {
+int getBInput(void) {
     UBYTE input = joypad();
-    if (input & J_B) {
-        b = -1;
-        return b;
-    } else if (input & J_B) {
-        b = 1;
-        return b;
+    if (input & J_B && !(previousInputState & J_B)) {
+        previousInputState = input;
+        return 1;
+    } else {
+        previousInputState = input;
+        return 0;
     }
-    return b;
 }
 
-int getSELECTInput(int select) {
+int getSELECTInput(void) {
     UBYTE input = joypad();
-    if (input & J_SELECT) {
-        select = -1;
-        return select;
-    } else if (input & J_SELECT) {
-        select = 1;
-        return select;
+    if (input & J_SELECT && !(previousInputState & J_SELECT)) {
+        previousInputState = input;
+        return 1;
+    } else {
+        previousInputState = input;
+        return 0;
     }
-    return select;
 }
 
-int getSTARTInput(int start) {
+int getSTARTInput(void) {
     UBYTE input = joypad();
-    if (input & J_START) {
-        start = -1;
-        return start;
-    } else if (input & J_START) {
-        start = 1;
-        return start;
+    if (input & J_START && !(previousInputState & J_START)) {
+        previousInputState = input;
+        return 1;
+    } else {
+        previousInputState = input;
+        return 0;
     }
-    return start;
 }
