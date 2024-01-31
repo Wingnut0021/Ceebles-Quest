@@ -3,6 +3,9 @@
 
 #include <gb/gb.h>
 
+void VBlankHandler(void);
+void initializeCore(void);
+void pauseGameplay(void);
 void core_run(void);
 
 #endif
