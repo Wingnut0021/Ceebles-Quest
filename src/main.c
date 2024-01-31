@@ -3,5 +3,6 @@
 #include "core.h"
 
 void main(void) {
+    initializeCore();
     core_run();
 }
