@@ -55,22 +55,18 @@ int getBInput(void) {
 
 int getSELECTInput(void) {
     UBYTE input = joypad();
-    if (input & J_SELECT && !(previousInputState & J_SELECT)) {
-        previousInputState = input;
+    if (input & J_SELECT) {
         return 1;
     } else {
-        previousInputState = input;
         return 0;
     }
 }
 
 int getSTARTInput(void) {
     UBYTE input = joypad();
-    if (input & J_START && !(previousInputState & J_START)) {
-        previousInputState = input;
+    if (input & J_START) {
         return 1;
     } else {
-        previousInputState = input;
         return 0;
     }
 }
