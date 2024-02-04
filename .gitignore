@@ -56,3 +56,4 @@ res/
 .vscode/
 gbdk/
 .DS_Store
+.code-workspace
