@@ -53,7 +53,8 @@ dkms.conf
 
 build/
 res/
-.vscode/
+.vscode/*
 gbdk/
 .DS_Store
-.code-workspace
+*.code-workspace
+.vscode/settings.json
