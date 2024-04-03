@@ -2,6 +2,6 @@
 #define ENEMY_SAMPLE_H
 
 void initializeEnemy(void);
-void updateEnemy(void)
+void updateEnemy(void);
 
 #endif

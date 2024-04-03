@@ -18,10 +18,10 @@ void initializeMainMenuScene(void) {
     SHOW_BKG;
     fadeIn(10);
     DISPLAY_ON;
-    waitpad(J_START);
-    pressStart();
 }
 
 void updateMainMenuScene(void) {
-    //animate sprite here or allow menu selection.
+    if (joypad() & J_START) {
+        pressStart();
+    }
 }

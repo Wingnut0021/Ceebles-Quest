@@ -11,6 +11,7 @@ void initializeEnemy(void) {
     set_sprite_native_data(4, 2, sprite_test);
     set_sprite_tile(4, 4);
     move_sprite(4, enemySpriteX, enemySpriteY);
+    SHOW_SPRITES;
 }
 
 void updateEnemy(void) {

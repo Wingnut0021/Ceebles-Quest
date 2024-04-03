@@ -3,8 +3,9 @@
 #include <string.h>
 #include "ts_splash.h"
 #include "scenemanager.h"
+#include "util_perfdelay.h"
 
-static UINT16 splashTimer;
+static uint16_t splashTimer;
 
 void initializeSplashScene(void) {
     // Set time splashscreen to say on screen.
@@ -27,7 +28,7 @@ void updateSplashScene(void) {
     } else {
         endSplashScene();
         HIDE_BKG;
-        delay(10);
+        perf_delay(10);
         DISPLAY_OFF;
         switchScene(MAIN_MENU);
     }

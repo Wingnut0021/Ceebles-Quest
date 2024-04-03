@@ -36,8 +36,8 @@ void closeMenuSound(void) {
 }
 
 void attackSound(void) {
-    NR10_REG = 0x16;
-    NR11_REG = 0x10;
+    NR10_REG = 0x26;
+    NR11_REG = 0x15;
     NR12_REG = 0x73;
     NR13_REG = 0x00;
     NR14_REG = 0xC3;

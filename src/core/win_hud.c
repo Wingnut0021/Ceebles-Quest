@@ -6,6 +6,7 @@
 #include "bg_hud_tileset.h"
 #include "bg_hud_tilemap.h"
 #include "sound_effects.h"
+#include "util_perfdelay.h"
 
 
 #define hudDownPosition 128
@@ -31,7 +32,7 @@ void updateHud(void) {
         openMenuSound();
         HIDE_SPRITES;
         while (hudCurrentPosition != 0) {
-            delay(10);
+            perf_delay(1);
             scroll_win(0,-2);
             hudCurrentPosition -= 2;
         }
@@ -43,7 +44,7 @@ void updateHud(void) {
         hudMoving = 1;
         closeMenuSound();
         while (hudCurrentPosition != 128) {
-            delay(10);
+            perf_delay(1);
             scroll_win(0, 2);
             hudCurrentPosition += 2;
         }

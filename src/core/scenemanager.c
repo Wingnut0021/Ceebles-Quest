@@ -8,7 +8,7 @@
 static enum Scene currentScene;
 
 void fadeIn(int fadeSpeed) {
-    UINT8 i;
+    uint8_t i;
     for(i = 0; i < 3; i++) {
         switch(i) {
             case 0:
@@ -26,7 +26,7 @@ void fadeIn(int fadeSpeed) {
 }
 
 void fadeOut(int fadeSpeed) {
-    UINT8 i;
+    uint8_t i;
     for(i = 0; i < 4; i++) {
         switch(i) {
             case 0:
@@ -47,10 +47,9 @@ void fadeOut(int fadeSpeed) {
 }
 
 void clearTilemap(void) {
-    // Set all tiles to value 0
-    UINT8 emptyTile = 0;
-    for (UINT8 y = 0; y < 18; y++) {
-        for (UINT8 x = 0; x < 20; x++) {
+    uint8_t emptyTile = 0;
+    for (uint8_t y = 0; y < 18; y++) {
+        for (uint8_t x = 0; x < 20; x++) {
             set_bkg_tiles(x, y, 1, 1, &emptyTile);
         }
     }

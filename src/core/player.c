@@ -1,12 +1,14 @@
 #include <gb/gb.h>
 #include <gbdk/emu_debug.h>
 #include <gbdk/metasprites.h>
+#include <stdint.h>
 #include "input.h"
 #include "spritemetasprite.h"
 #include "sprite_kingboy.h"
 #include "worldcollision.h"
 #include "util_perfdelay.h"
 #include "sound_effects.h"
+#include "player.h"
 
 
 const uint8_t attackCooldown = 20;
@@ -38,6 +40,7 @@ void initializePlayer(void) {
     player.spriteids[1] = 1;
     SHOW_SPRITES;
 }
+
 
 void moveMetaSprite(struct SpriteMetaSprite* player) {
     move_sprite(player->spriteids[0], spriteX - 4, spriteY - 6); // Offsets the X and Y so 8 size tile is in middle of 16 sprite.
@@ -189,7 +192,7 @@ void attackPlayer(void) {
         }
     }
     if (attackFrameCounter != 0) {
-        attackFrameCounter -= 1;
+        attackFrameCounter--;
     }
     EMU_printf("%d", attackFrameCounter);
 }
@@ -209,7 +212,6 @@ void movePlayer(void) {
         prevSpriteY = spriteY;
         spriteY = nextY;
     }
-    moveMetaSprite(&player);
     if (inputY < 0) {
         if (inputX < 0) {
             updatePlayerAnimation(2, 1, 0); //3
@@ -235,6 +237,7 @@ void movePlayer(void) {
             updatePlayerAnimation(1, 0, 0);
         }
     }
+    moveMetaSprite(&player);
 }
 
 void updatePlayer(void) {

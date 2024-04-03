@@ -28,7 +28,6 @@
 #define TILE_SLICE_24 0x002e
 
 
-
 extern const unsigned char sprite_kingboy[];
 
 #endif

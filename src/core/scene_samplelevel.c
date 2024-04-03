@@ -14,12 +14,10 @@ void initializeSampleLevelScene(void) {
     fadeIn(100);
     initializeHud();
     initializePlayer();
-    initializeEnemy();
     DISPLAY_ON;
     SHOW_BKG;
 }
 
 void updateSampleLevelScene(void) {
     updatePlayer();
-    updateEnemy();
 }
