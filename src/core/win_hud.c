@@ -3,25 +3,27 @@
 #include <stdio.h>
 
 #include "input.h"
+#include "core.h"
 #include "bg_hud_tileset.h"
 #include "bg_hud_tilemap.h"
 #include "sound_effects.h"
 #include "util_perfdelay.h"
 
 
-#define hudDownPosition 128
-#define hudUpPosition 0
+#define HUD_DOWN_POSITION 128
+#define HUD_UP_POSITION 0
 
 
 uint8_t hudMoving = 0;
 uint8_t hudCurrentPosition;
+extern uint8_t gamePaused;
 
 
 void initializeHud(void) {
     set_win_tiles(0, 0, 20, 18, bg_hud_tilemap);
-    move_win(0, hudDownPosition);
+    move_win(0, HUD_DOWN_POSITION);
     scroll_win(7,0); // This seems hacky,
-    hudCurrentPosition = hudDownPosition;
+    hudCurrentPosition = HUD_DOWN_POSITION;
     SHOW_WIN;
 }
 
@@ -51,6 +53,10 @@ void updateHud(void) {
         if (hudCurrentPosition == 128) {
             hudMoving = 0;
             SHOW_SPRITES;
+            gamePaused = 0;
         }
+    }
+    if (hudCurrentPosition < 128) {
+        gamePaused = 1;
     }
 }

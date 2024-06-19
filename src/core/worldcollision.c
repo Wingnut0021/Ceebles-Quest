@@ -13,7 +13,7 @@ uint8_t isTileSolid(uint8_t tileX, uint8_t tileY) {
             return 1; // Solid
         } else if (bg_samplemap_collision[tileIndex] == 0x00) {
             return 0; // Not solid
-        } 
+        }
     }
     return 1;
 }

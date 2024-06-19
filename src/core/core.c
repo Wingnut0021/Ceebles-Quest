@@ -11,6 +11,7 @@
 #include "win_hud.h"
 
 extern uint8_t hudCurrentPosition;
+extern uint8_t gamePaused;
 
 void VBlankHandler(void) {
     
@@ -23,15 +24,12 @@ void initializeCore(void) {
 }
 
 void pauseGameplay(void) {
-
+    gamePaused = 1;
 }
 
 void core_run(void) {
     while (1) {
-        if (hudCurrentPosition == 128)
-        {
-            updateScene();
-        }
+        updateScene();
         updateHud();
         wait_vbl_done();
     }
