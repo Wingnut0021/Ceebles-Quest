@@ -6,6 +6,7 @@
 
 
 void initializeHud(void);
+void displayInventoryItems(void);
 void updateHud(void);
 
 #endif

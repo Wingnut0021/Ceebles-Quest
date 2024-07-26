@@ -8,40 +8,17 @@
 static enum Scene currentScene;
 
 void fadeIn(int fadeSpeed) {
-    uint8_t i;
-    for(i = 0; i < 3; i++) {
-        switch(i) {
-            case 0:
-                BGP_REG = 0xFE;
-                break;
-            case 1:
-                BGP_REG = 0xF9;
-                break;
-            case 2:
-                BGP_REG = 0xE4;
-                break;
-        }
+    uint8_t fadeValues[] = {0xFF, 0xFE, 0xF9, 0xE4};
+    for(uint8_t i = 0; i < sizeof(fadeValues); i++) {
+        BGP_REG = fadeValues[i];
         perf_delay(fadeSpeed);
     }
 }
 
 void fadeOut(int fadeSpeed) {
-    uint8_t i;
-    for(i = 0; i < 4; i++) {
-        switch(i) {
-            case 0:
-                BGP_REG = 0xE4;
-                break;
-            case 1:
-                BGP_REG = 0xF9;
-                break;
-            case 2:
-                BGP_REG = 0xFE;
-                break;
-            case 3:
-                BGP_REG = 0xFF;
-                break;
-        }
+    uint8_t fadeValues[] = {0xE4, 0xF9, 0xFE, 0xFF};
+    for(uint8_t i = 0; i < sizeof(fadeValues); i++) {
+        BGP_REG = fadeValues[i];
         perf_delay(fadeSpeed);
     }
 }
@@ -71,26 +48,21 @@ void updateScene(void) {
 
 void switchScene(enum Scene newScene) {
     currentScene = newScene;
+    clearTilemap();
     switch (newScene) {
         case SPLASH:
-            clearTilemap();
             initializeSplashScene();
-            SHOW_BKG;
             break;
         case MAIN_MENU:
-            clearTilemap();
             initializeMainMenuScene();
-            SHOW_BKG;
             break;
         case SAMPLE_LEVEL:
-            clearTilemap();
             initializeSampleLevelScene();
-            SHOW_BKG;
             break;
     }
+    SHOW_BKG;
 }
 
 void initializeScene(enum Scene initialScene) {
-    currentScene = initialScene;
     switchScene(initialScene);
 }

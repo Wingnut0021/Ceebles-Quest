@@ -30,4 +30,4 @@
 
 extern const unsigned char sprite_kingboy[];
 
-#endif
+#endif // SPRITE_KINGBOY_H

@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include "core.h"
 
-void main(void) {
+int main(void) {
     initializeCore();
     core_run();
+    return 0;
 }

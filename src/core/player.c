@@ -9,6 +9,7 @@
 #include "util_perfdelay.h"
 #include "sound_effects.h"
 #include "player.h"
+#include "core.h"
 
 
 const uint8_t attackCooldown = 20;
@@ -48,7 +49,6 @@ void initializePlayer(void) {
 	SHOW_SPRITES;
 }
 
-
 void moveMetaSprite(struct SpriteMetaSprite* player) {
 	move_sprite(player->spriteids[0], spriteX - 4, spriteY - 6); // Offsets the X and Y so 8 size tile is in middle of 16 sprite.
 	move_sprite(player->spriteids[1], spriteX + spriteSize - 4, spriteY - 6); 
@@ -57,7 +57,7 @@ void moveMetaSprite(struct SpriteMetaSprite* player) {
 void updatePlayerAnimation(uint8_t direction, uint8_t isMoving, uint8_t isAttacking) {
 	static uint8_t oldDirection;
 	static uint8_t frameCounter = 0;
-	if (!oldDirection == direction) {
+	if (oldDirection != direction) {
 		frameCounter = 0;
 	} 
 	if (isMoving == 0) {
@@ -208,11 +208,13 @@ void attackPlayer(void) {
 void movePlayer(void) {
 	inputX = getXDirectionInput(inputX);
 	inputY = getYDirectionInput(inputY);
+
 	uint8_t nextX = spriteX + inputX;
 	uint8_t nextY = spriteY + inputY;
+	
 	uint8_t nextTileIsSolidX = isTileSolid(nextX / 8, spriteY / 8);
 	uint8_t nextTileIsSolidY = isTileSolid(spriteX / 8, nextY / 8);
-	
+
 	if (nextTileIsSolidX == 0) {
 		prevSpriteX = spriteX;
 		spriteX = nextX;
