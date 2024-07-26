@@ -58,3 +58,6 @@ gbdk/
 .DS_Store
 *.code-workspace
 .vscode/settings.json
+.idea/.idea.Ceebles Quest.dir/.idea/projectSettingsUpdater.xml
+.idea/.idea.Ceebles Quest.dir/.idea/workspace.xml
+.idea/workspace.xml
