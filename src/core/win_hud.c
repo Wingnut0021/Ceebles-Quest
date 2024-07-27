@@ -1,16 +1,13 @@
 #include <gb/gb.h>
 #include <gbdk/emu_debug.h>
-#include <gbdk/metasprites.h>
-#include <stdio.h>
 
-#include "input.h"
-#include "core.h"
-#include "bg_hud_tileset.h"
 #include "bg_hud_tilemap.h"
+#include "core.h"
+#include "input.h"
 #include "sound_effects.h"
-#include "util_perfdelay.h"
 #include "sprite_inventory_items.h"
 #include "spritemetasprite.h"
+#include "util.h"
 
 
 #define HUD_DOWN_POSITION 128
@@ -19,7 +16,9 @@
 
 uint8_t hudMoving = 0;
 uint8_t hudCurrentPosition;
-extern uint8_t gamePaused;
+uint8_t inputStart = 0;
+uint8_t gamePaused = 0;
+
 
 struct SpriteMetaSprite item;
 
@@ -33,18 +32,19 @@ void initializeHud(void) {
 }
 
 void displayInventoryItems(void) {
-    set_sprite_1bpp_data(6, 2, &sprite_inventory_items[POTION_TILE_SLICE_01 * 16]);
-    set_sprite_1bpp_data(8, 2, &sprite_inventory_items[POTION_TILE_SLICE_02 * 16]);
-    SPRITES_8x16;
-    set_sprite_tile(6, 6);
-    set_sprite_tile(8, 7);
-    move_sprite(6, 20, 100);
-    move_sprite(8, 28, 100);
-    SHOW_SPRITES;
+	set_sprite_1bpp_data(6, 2, &sprite_inventory_items[POTION_TILE_SLICE_01 * 16]);
+	set_sprite_1bpp_data(8, 2, &sprite_inventory_items[POTION_TILE_SLICE_02 * 16]);
+	SPRITES_8x16;
+	set_sprite_tile(6, 6);
+	set_sprite_tile(8, 7);
+	move_sprite(6, 20, 100);
+	move_sprite(8, 28, 100);
+	SHOW_SPRITES;
 }
 
+uint8_t getSTARTInput(void);
 void updateHud(void) {
-    auto uint8_t inputStart = getSTARTInput(inputStart);
+
     if (inputStart == 1 && hudCurrentPosition == 128 && hudMoving == 0) {
         displayInventoryItems();
         hudMoving = 1;

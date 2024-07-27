@@ -8,13 +8,13 @@ int getXDirectionInput(int x) {
     if (input & J_LEFT) {
         x = -1;
         return x;
-    } else if (input & J_RIGHT) {
+    }
+    if (input & J_RIGHT) {
         x = 1;
         return x;
-    } else {
-        x = 0;
-        return x;
     }
+    x = 0;
+    return x;
 }
 
 int getYDirectionInput(int y) {
@@ -22,13 +22,13 @@ int getYDirectionInput(int y) {
     if (input & J_UP) {
         y = -1;
         return y;
-    } else if (input & J_DOWN) {
+    }
+    if (input & J_DOWN) {
         y = 1;
         return y;
-    } else {
-        y = 0;
-        return y;
     }
+    y = 0;
+    return y;
 }
 
 int getAInput(void) {
@@ -36,10 +36,9 @@ int getAInput(void) {
     if (input & J_A && !(previousInputState & J_A)) {
         previousInputState = input;
         return 1;
-    } else {
-        previousInputState = input;
-        return 0;
     }
+    previousInputState = input;
+    return 0;
 }
 
 int getBInput(void) {
@@ -47,26 +46,23 @@ int getBInput(void) {
     if (input & J_B && !(previousInputState & J_B)) {
         previousInputState = input;
         return 1;
-    } else {
-        previousInputState = input;
-        return 0;
     }
+    previousInputState = input;
+    return 0;
 }
 
 int getSELECTInput(void) {
     UBYTE input = joypad();
     if (input & J_SELECT) {
         return 1;
-    } else {
-        return 0;
     }
+    return 0;
 }
 
 int getSTARTInput(void) {
     UBYTE input = joypad();
     if (input & J_START) {
         return 1;
-    } else {
-        return 0;
     }
+    return 0;
 }

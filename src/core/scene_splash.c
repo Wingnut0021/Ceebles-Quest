@@ -1,9 +1,8 @@
 #include <gb/gb.h>
 #include <stdio.h>
-#include <string.h>
-#include "ts_splash.h"
 #include "scenemanager.h"
-#include "util_perfdelay.h"
+#include "ts_splash.h"
+#include "util.h"
 
 static uint16_t splashTimer;
 

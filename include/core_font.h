@@ -1,7 +1,5 @@
-#ifndef CORE_H
-#define CORE_H
-
-#include <gb/gb.h>
+#ifndef CORE_FONT_H
+#define CORE_FONT_H
 
 void loadFont(void);
 

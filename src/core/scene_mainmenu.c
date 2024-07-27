@@ -1,11 +1,11 @@
 #include <gb/gb.h>
 #include <stdio.h>
-#include "sprite_test.h"
 #include "font_characters.h"
-#include "ts_mainmenu.h"
 #include "scenemanager.h"
 #include "sound_effects.h"
-#include "util_perfdelay.h"
+#include "sprite_test.h"
+#include "ts_mainmenu.h"
+#include "util.h"
 
 #define SPRITE_START_X 56
 #define SPRITE_START_Y 112

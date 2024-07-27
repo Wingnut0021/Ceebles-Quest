@@ -1,12 +1,10 @@
 #include <gb/gb.h>
 #include <gbdk/emu_debug.h>
-#include <gbdk/metasprites.h>
 #include <stdint.h>
 #include "input.h"
 #include "spritemetasprite.h"
 #include "sprite_kingboy.h"
 #include "worldcollision.h"
-#include "util_perfdelay.h"
 #include "sound_effects.h"
 #include "player.h"
 #include "core.h"
@@ -23,7 +21,7 @@ uint8_t spriteSize = 8;
 uint8_t prevSpriteX;
 uint8_t prevSpriteY;
 
-union PlayerStats playerStats;
+PlayerStats playerStats;
 struct SpriteMetaSprite player;
 
 
@@ -54,7 +52,7 @@ void moveMetaSprite(struct SpriteMetaSprite* player) {
 	move_sprite(player->spriteids[1], spriteX + spriteSize - 4, spriteY - 6); 
 }
 
-void updatePlayerAnimation(uint8_t direction, uint8_t isMoving, uint8_t isAttacking) {
+void updatePlayerAnimation(uint8_t direction, const uint8_t isMoving) {
 	static uint8_t oldDirection;
 	static uint8_t frameCounter = 0;
 	if (oldDirection != direction) {
@@ -85,6 +83,7 @@ void updatePlayerAnimation(uint8_t direction, uint8_t isMoving, uint8_t isAttack
 				set_sprite_native_data(2, 2, &sprite_kingboy[TILE_SLICE_14 * 16]);
 				frameCounter = 0;
 				break;
+			default: ;
 		}
 	}
 	if (direction == 0) {
@@ -109,6 +108,7 @@ void updatePlayerAnimation(uint8_t direction, uint8_t isMoving, uint8_t isAttack
 				set_sprite_native_data(2, 2, &sprite_kingboy[TILE_SLICE_02 * 16]);
 				frameCounter = 0;
 				break;
+			default: ;
 		}
 	}
 	if (direction == 2) {
@@ -134,6 +134,7 @@ void updatePlayerAnimation(uint8_t direction, uint8_t isMoving, uint8_t isAttack
 				set_sprite_native_data(2, 2, &sprite_kingboy[TILE_SLICE_20 * 16]);
 				frameCounter = 0;
 				break;
+			default: ;
 		}
 	}
 	if (direction == 4) {
@@ -159,6 +160,7 @@ void updatePlayerAnimation(uint8_t direction, uint8_t isMoving, uint8_t isAttack
 				set_sprite_native_data(2, 2, &sprite_kingboy[TILE_SLICE_08 * 16]);
 				frameCounter = 0;
 				break;
+			default: ;
 		}
 	}
 	if (direction == 6) {
@@ -184,6 +186,7 @@ void updatePlayerAnimation(uint8_t direction, uint8_t isMoving, uint8_t isAttack
 				set_sprite_native_data(2, 2, &sprite_kingboy[TILE_SLICE_14 * 16]);
 				frameCounter = 0;
 				break;
+			default: ;
 		}
 	}
 	oldDirection = direction;
@@ -193,7 +196,6 @@ void updatePlayerAnimation(uint8_t direction, uint8_t isMoving, uint8_t isAttack
 void attackPlayer(void) {
 	isAttacking = getAInput(isAttacking) + attackFrameCounter;
 	if (isAttacking == 1) {
-		EMU_printf("attacking");
 		if (attackFrameCounter == 0) {
 			attackSound();
 			attackFrameCounter = attackCooldown;
@@ -202,18 +204,17 @@ void attackPlayer(void) {
 	if (attackFrameCounter != 0) {
 		attackFrameCounter--;
 	}
-	EMU_printf("%d", attackFrameCounter);
 }
 
 void movePlayer(void) {
 	inputX = getXDirectionInput(inputX);
 	inputY = getYDirectionInput(inputY);
 
-	uint8_t nextX = spriteX + inputX;
-	uint8_t nextY = spriteY + inputY;
-	
-	uint8_t nextTileIsSolidX = isTileSolid(nextX / 8, spriteY / 8);
-	uint8_t nextTileIsSolidY = isTileSolid(spriteX / 8, nextY / 8);
+	const uint8_t nextX = spriteX + inputX;
+	const uint8_t nextY = spriteY + inputY;
+
+	const uint8_t nextTileIsSolidX = isTileSolid(nextX / 8, spriteY / 8);
+	const uint8_t nextTileIsSolidY = isTileSolid(spriteX / 8, nextY / 8);
 
 	if (nextTileIsSolidX == 0) {
 		prevSpriteX = spriteX;
@@ -225,27 +226,27 @@ void movePlayer(void) {
 	}
 	if (inputY < 0) {
 		if (inputX < 0) {
-			updatePlayerAnimation(2, 1, 0); //3
+			updatePlayerAnimation(2, 1); //3
 		} else if (inputX > 0) {
-			updatePlayerAnimation(6, 1, 0); //5
+			updatePlayerAnimation(6, 1); //5
 		} else {
-			updatePlayerAnimation(4, 1, 0);
+			updatePlayerAnimation(4, 1);
 		}
 	} else if (inputY > 0) {
 		if (inputX < 0) {
-			updatePlayerAnimation(2, 1, 0); //1
+			updatePlayerAnimation(2, 1); //1
 		} else if (inputX > 0) {
-			updatePlayerAnimation(6, 1, 0); //7
+			updatePlayerAnimation(6, 1); //7
 		} else {
-			updatePlayerAnimation(0, 1, 0);
+			updatePlayerAnimation(0, 1);
 		}
 	} else {
 		if (inputX < 0) {
-			updatePlayerAnimation(2, 1, 0);
+			updatePlayerAnimation(2, 1);
 		} else if (inputX > 0) {
-			updatePlayerAnimation(6, 1, 0);
+			updatePlayerAnimation(6, 1);
 		} else {
-			updatePlayerAnimation(1, 0, 0);
+			updatePlayerAnimation(1, 0);
 		}
 	}
 	moveMetaSprite(&player);

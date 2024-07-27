@@ -11,13 +11,13 @@
             "emuliciousPath": "${workspaceFolder}/gbdk/Resources/Emulicious"
             },
             "windows": {
-            "emuliciousPath": "${workspaceFolder}\\gbdk\\Resources\\Emulicious"
+            "emuliciousPath": "D:\\GitHub\\gbdk\\Resources\\Emulicious"
             },
+            "preLaunchTask": "${defaultBuildTask}",
             "name": "Launch in Emulicious",
             "program": "${workspaceFolder}/build/game.gb",
             "port": 58870,
-            "stopOnEntry": false,
-            "preLaunchTask": "${defaultBuildTask}"
+            "stopOnEntry": false
         }
     ]
 }

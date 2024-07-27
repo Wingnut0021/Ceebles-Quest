@@ -1,5 +1,3 @@
-#include <gb/gb.h>
-#include <stdio.h>
 #include "core.h"
 
 int main(void) {

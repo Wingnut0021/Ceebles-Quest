@@ -4,10 +4,10 @@
 #include <gb/gb.h>
 
 
-typedef struct InventoryItem {
+typedef struct FInventoryItem {
     uint8_t current_quantity;
     uint8_t max_quantity;
-} InventoryItem;
+} FInventoryItem;
 
 #define ITEM_TYPES 10
 #define SLOT_POTION 1
@@ -21,11 +21,11 @@ typedef struct InventoryItem {
 #define SLOT_09 9
 #define SLOT_10 10
 
-typedef struct {
-    InventoryItem inventoryItems[ITEM_TYPES];
-} Inventory;
+typedef struct FInventory {
+    FInventoryItem inventoryItems[ITEM_TYPES];
+} FInventory;
 
-void initInventory(Inventory *inv);
+void initInventory(FInventory *inv);
 
 uint8_t addItem();
 uint8_t removeItem();

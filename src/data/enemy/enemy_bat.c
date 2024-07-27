@@ -1,9 +1,9 @@
-#include "enemy_bat.h"
+#include "data/enemy_bat.h"
 
-void batMove(Enemy *self) {
+void batMove(void) {
     
 }
 
-void batAttack(Enemy *self) {
+void batAttack(void) {
 
 }

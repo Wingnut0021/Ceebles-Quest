@@ -1,22 +1,27 @@
 #include "scenemanager.h"
-#include "scene_mainmenu.h" 
-#include "scene_splash.h"
+
+#include <gb/gb.h>
+#include <gb/hardware.h>
+#include <stdint.h>
+
+#include "scene_mainmenu.h"
 #include "scene_samplelevel.h"
+#include "scene_splash.h"
 #include "scenes.h"
-#include "util_perfdelay.h"
+#include "util.h"
 
 static enum Scene currentScene;
 
-void fadeIn(int fadeSpeed) {
-    uint8_t fadeValues[] = {0xFF, 0xFE, 0xF9, 0xE4};
+void fadeIn(const int fadeSpeed) {
+    const uint8_t fadeValues[] = {0xFF, 0xFE, 0xF9, 0xE4};
     for(uint8_t i = 0; i < sizeof(fadeValues); i++) {
         BGP_REG = fadeValues[i];
         perf_delay(fadeSpeed);
     }
 }
 
-void fadeOut(int fadeSpeed) {
-    uint8_t fadeValues[] = {0xE4, 0xF9, 0xFE, 0xFF};
+void fadeOut(const int fadeSpeed) {
+    const uint8_t fadeValues[] = {0xE4, 0xF9, 0xFE, 0xFF};
     for(uint8_t i = 0; i < sizeof(fadeValues); i++) {
         BGP_REG = fadeValues[i];
         perf_delay(fadeSpeed);
@@ -24,7 +29,7 @@ void fadeOut(int fadeSpeed) {
 }
 
 void clearTilemap(void) {
-    uint8_t emptyTile = 0;
+    const uint8_t emptyTile = 0;
     for (uint8_t y = 0; y < 18; y++) {
         for (uint8_t x = 0; x < 20; x++) {
             set_bkg_tiles(x, y, 1, 1, &emptyTile);
@@ -43,10 +48,11 @@ void updateScene(void) {
         case SAMPLE_LEVEL:
             updateSampleLevelScene();
             break;
+        default: ;
     }
 }
 
-void switchScene(enum Scene newScene) {
+void switchScene(const enum Scene newScene) {
     currentScene = newScene;
     clearTilemap();
     switch (newScene) {
@@ -59,10 +65,11 @@ void switchScene(enum Scene newScene) {
         case SAMPLE_LEVEL:
             initializeSampleLevelScene();
             break;
+        default: ;
     }
     SHOW_BKG;
 }
 
-void initializeScene(enum Scene initialScene) {
+void initializeScene(const enum Scene initialScene) {
     switchScene(initialScene);
 }
