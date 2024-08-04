@@ -1,27 +1,15 @@
 {
     "configurations": [
         {
-            "name": "Mac",
-            "cStandard": "c11",
-            "intelliSenseMode": "gcc-x64",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}/include/**",
-                "${workspaceFolder}/include/data/**",
-                "${workspaceFolder}/include/states/**",
-                "${workspaceFolder}/../../Resources/gbdk-mac/include/**"
-            ]
-        },
-        {
             "name": "Win32",
             "cStandard": "c11",
-            "intelliSenseMode": "gcc-x64",
+            "intelliSenseMode": "windows-gcc-x64",
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/include/**",
                 "${workspaceFolder}/include/data/**",
                 "${workspaceFolder}/include/states/**",
-                "${workspaceFolder}/../../Resources/gbdk-win/include/**"
+                "D:\\GitHub\\gbdk\\Resources\\gbdk-win\\include\\**"
             ]
         }
     ],

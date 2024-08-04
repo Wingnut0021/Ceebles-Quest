@@ -13,8 +13,8 @@ void initializeSampleLevelScene(void) {
     fadeIn(100);
     initializeHud();
     initializePlayer();
-    DISPLAY_ON;
     SHOW_BKG;
+	DISPLAY_ON;
 }
 
 void updateSampleLevelScene(void) {

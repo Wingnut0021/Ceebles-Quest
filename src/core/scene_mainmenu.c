@@ -11,6 +11,15 @@
 #define SPRITE_START_Y 112
 #define MAX_STRING_SIZE 17
 
+#define SPRITE_COL_1 72
+#define SPRITE_COL_2 80
+#define SPRITE_COL_3 88
+#define SPRITE_COL_4 96
+#define SPRITE_COL_5 104
+
+#define SPRITE_ROW_1 116
+#define SPRITE_ROW_2 108
+
 uint8_t mainmenuSelection = 0;
 
 
@@ -27,11 +36,14 @@ void pressStart(void) {
 
 void initializeMainMenuScene(void) {
     const uint8_t sprite_tiles[] = { TILE_SLICE_01, 46, 47, 28, 45, 47, 45, 46, 27, 44, 46 };
-    const uint8_t sprite_positions[][2] = {
-        { SPRITE_START_X, SPRITE_START_Y },
-        { 72, 116 }, { 80, 116 }, { 88, 116 }, { 96, 116 }, { 104, 116 },
-        { 72, 108 }, { 80, 108 }, { 88, 108 }, { 96, 108 }, { 104, 108 }
-    };
+	const uint8_t sprite_positions[][2] = {
+		{ SPRITE_START_X, SPRITE_START_Y },
+		{ SPRITE_COL_1, SPRITE_ROW_1 }, { SPRITE_COL_2, SPRITE_ROW_1 },
+		{ SPRITE_COL_3, SPRITE_ROW_1 }, { SPRITE_COL_4, SPRITE_ROW_1 },
+		{ SPRITE_COL_5, SPRITE_ROW_1 }, { SPRITE_COL_1, SPRITE_ROW_2 },
+		{ SPRITE_COL_2, SPRITE_ROW_2 }, { SPRITE_COL_3, SPRITE_ROW_2 },
+		{ SPRITE_COL_4, SPRITE_ROW_2 }, { SPRITE_COL_5, SPRITE_ROW_2 }
+	};
 
     clear_sprite_data(0);
     set_bkg_data(0, ts_mainmenu_size, ts_mainmenu);

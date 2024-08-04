@@ -3,12 +3,13 @@
 #include "scenemanager.h"
 #include "scenes.h"
 #include "win_hud.h"
+#include "core.h"
 
 extern uint8_t hudCurrentPosition;
-extern uint8_t gamePaused;
+uint8_t gamePaused = 0;
 
 void VBlankHandler(void) {
-    
+	// Not sure yet what to use this for.
 }
 
 void initializeCore(void) {
@@ -23,8 +24,8 @@ void pauseGameplay(void) {
 
 void core_run(void) {
 	while (1) {
-        updateScene();
-        updateHud();
-        wait_vbl_done();
+		updateScene();
+		updateHud();
+		wait_vbl_done();
     }
 }

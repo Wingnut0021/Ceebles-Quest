@@ -1,5 +1,5 @@
-#ifndef CORE_H
-#define CORE_H
+#ifndef INPUT_H
+#define INPUT_H
 
 
 int getXDirectionInput(int x);
@@ -10,4 +10,4 @@ int getAInput(int a);
 int getSELECTInput(int select);
 int getSTARTInput(int );
 
-#endif
+#endif // INPUT_H

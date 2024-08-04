@@ -9,12 +9,14 @@
  * @param fadeSpeed The speed at which the scene should fade in.
  */
 void fadeIn(int fadeSpeed);
+
 /**
  * Fades out the current scene with the specified fade speed.
  *
  * @param fadeSpeed The speed at which the scene fades out.
  */
 void fadeOut(int fadeSpeed);
+
 /**
  * Clears the tilemap.
  */
