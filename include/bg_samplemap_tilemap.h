@@ -1,3 +1,5 @@
+#pragma once
+#pragma bank 1
 #define bg_samplemap_tilemap_width 20
 #define bg_samplemap_tilemap_height 18
 

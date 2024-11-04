@@ -21,6 +21,7 @@ uint8_t spriteSize = 8;
 uint8_t prevSpriteX;
 uint8_t prevSpriteY;
 
+
 PlayerStats playerStats;
 struct SpriteMetaSprite player;
 
@@ -253,8 +254,7 @@ void movePlayer(void) {
 }
 
 void updatePlayer(void) {
-	attackPlayer();
-	if (isAttacking == 0) {
+	if (gamePaused == 1) {
 		movePlayer();
 	}
 }

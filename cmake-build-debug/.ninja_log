@@ -1,0 +1,16 @@
+# ninja log v6
+60	139	7437674264642702	CMakeFiles/game.dir/src/data/sprite_test.c.obj	45815f7afe9441da
+92	373	7450811088505213	CMakeFiles/game.dir/src/data/bg_samplemap_collision.c.obj	517d9191bcad36d
+86	372	7450811088440049	CMakeFiles/game.dir/src/data/bg_hud_tilemap.c.obj	a356ea8110cc06e2
+97	387	7450811088560357	CMakeFiles/game.dir/src/data/bg_samplemap_tilemap.c.obj	4af63f926ab1171d
+100	149	7444535223253165	CMakeFiles/game.dir/src/data/sprite_inventory_items.c.obj	b79ff500f027b6a2
+88	373	7450811088465143	CMakeFiles/game.dir/src/data/bg_hud_tileset.c.obj	852638d9a7904363
+125	401	7444527405272405	CMakeFiles/game.dir/src/data/bg_samplemap_tileset.c.obj	c7a0c82574ba94cd
+64	112	7437523267177751	CMakeFiles/game.dir/src/data/sprite_kingboy.c.obj	4a98abcb43883a39
+132	401	7444527405337540	CMakeFiles/game.dir/src/data/enemy/enemy_bat.c.obj	c595aae27bf02e19
+91	154	7444535223163161	CMakeFiles/game.dir/src/data/inventory.c.obj	5babfc3949365d63
+59	569	7476700066613482	build.ninja	67877db93c63e24
+51	224	7476700067430788	CMakeFiles/game.dir/src/data/bg_hud_tilemap.c.obj	eee50a8e9f6b30c1
+58	225	7476700067502656	CMakeFiles/game.dir/src/data/bg_samplemap_collision.c.obj	bff0faf7edf01816
+55	231	7476700067470811	CMakeFiles/game.dir/src/data/bg_hud_tileset.c.obj	7320816ccf54fc69
+61	231	7476700067542634	CMakeFiles/game.dir/src/data/bg_samplemap_tilemap.c.obj	e7d69abe0d2bc14f

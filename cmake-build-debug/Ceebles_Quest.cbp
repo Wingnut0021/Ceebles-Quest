@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Ceebles_Quest"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/GitHub/Ceebles Quest/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Build_ROM">
+				<Option working_dir="D:/GitHub/Ceebles Quest/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 Build_ROM"/>
+					<CompileFile command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game">
+				<Option output="D:/GitHub/Ceebles Quest/cmake-build-debug/game.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/GitHub/Ceebles Quest/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="G:/gbdk/include"/>
+					<Add directory="D:/GitHub/Ceebles Quest/include"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 game"/>
+					<CompileFile command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="game/fast">
+				<Option output="D:/GitHub/Ceebles Quest/cmake-build-debug/game.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/GitHub/Ceebles Quest/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="G:/gbdk/include"/>
+					<Add directory="D:/GitHub/Ceebles Quest/include"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="G:/Jetbrains/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 game/fast"/>
+					<CompileFile command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/GitHub/Ceebles Quest/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/GitHub/Ceebles Quest/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="G:/Jetbrains/CLion/bin/mingw/bin/mingw32-make.exe -f &quot;D:/GitHub/Ceebles Quest/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/core.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/core_font.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/enemy_sample.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/input.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/player.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/scene_mainmenu.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/scene_samplelevel.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/scene_splash.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/scenemanager.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/sound_effects.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/spritemetasprite.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/util.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/win_hud.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/core/worldcollision.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/bg_hud_tilemap.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/bg_hud_tileset.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/bg_samplemap_collision.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/bg_samplemap_tilemap.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/bg_samplemap_tileset.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/enemy/enemy.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/enemy/enemy_bat.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/font_characters.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/inventory.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/potion.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/sprite_inventory_items.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/sprite_kingboy.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/sprite_test.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/ts_house.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/ts_mainmenu.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/data/ts_splash.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/src/main.c">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="D:/GitHub/Ceebles Quest/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

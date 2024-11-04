@@ -17,5 +17,20 @@
         }
     },
     
-    "terminal.integrated.defaultProfile.windows": "Command Prompt"
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "C_Cpp.default.intelliSenseMode": "windows-gcc-x64",
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "C_Cpp.default.includePath": [
+        "D:/GitHub/gbdk/resources/gbdk-win/include/"
+    ],
+    "files.associations": {
+        "*.c": "c",
+        "player.h": "c",
+        "gb.h": "c",
+        "emu_debug.h": "c",
+        "sprite_test.h": "c",
+        "rand.h": "c",
+        "scenemanager.h": "c"
+    },
+    "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\gcc.exe"
 }
